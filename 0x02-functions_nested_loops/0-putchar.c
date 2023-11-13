@@ -17,6 +17,5 @@ int main(void)
 		_putchar(word[index]);
 	}
 	_putchar('\n');
-	
-	return 0;
+	return (0);
 }

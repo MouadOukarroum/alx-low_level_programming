@@ -1,13 +1,13 @@
 #include "main.h"
 
+/**
+ * main - Entry point
+ *
+ * Description: prints _putchar using putchar prototype
+ *
+ * Return: Always 0 (Success)
+*/
 
-/*
- * main - Entry point of the program
- *
- * Description: print _putchar to the console
- *
- * Return: always 0 (success)
- */
 int main(void)
 {
 	char word[] = "_putchar";

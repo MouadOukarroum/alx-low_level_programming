@@ -1,20 +1,21 @@
 #include "main.h"
 
+
 /*
- * main - Entry point
- * char is the word to be printed
- * Description: this code prints _putchar to
- * the console using _putchar prototye
+ * main - Entry point of the program
+ *
+ * Description: print _putchar to the console
+ *
  * Return: always 0 (success)
  */
 int main(void)
 {
 	char word[] = "_putchar";
-	int index;
+	int i;
 
-	for (index = 0; index < 8; index++)
+	for (i = 0; i < 8; i++)
 	{
-		_putchar(word[index]);
+		_putchar(word[i]);
 	}
 	_putchar('\n');
 	return (0);

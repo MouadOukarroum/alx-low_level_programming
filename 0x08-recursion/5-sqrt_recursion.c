@@ -35,7 +35,7 @@ int square(int num, int num1)
 	}
 	else if (num1 * num1 < num)
 	{
-		square(num, (num1 + 1));
+		result = square(num, (num1 + 1));
 	}
 	else
 	{

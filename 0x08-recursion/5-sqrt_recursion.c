@@ -23,9 +23,15 @@ int _sqrt_recursion(int n)
 
 int square(int num, int num1)
 {
-	if (num1 * num1 == num)
+	int result = 0;
+
+	if (num == 1)
 	{
-		return (num1);
+		result = 1;
+	}
+	else if (num1 * num1 == num)
+	{
+		result = num1;
 	}
 	else if (num1 * num1 < num)
 	{
@@ -33,6 +39,8 @@ int square(int num, int num1)
 	}
 	else
 	{
-		return (-1);
+		result = -1;
 	}
+
+	return (result);
 }

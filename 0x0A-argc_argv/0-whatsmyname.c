@@ -8,10 +8,9 @@
  * Return: always 0 (success)
  */
 
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	_puts_recursion(argv[0]);
-	(void)argc;
 
 	return (0);
 }

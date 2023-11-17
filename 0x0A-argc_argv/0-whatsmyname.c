@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	_puts_recursion(argv[0]);
+	(void)argc;
 	
 	return (0);
 }

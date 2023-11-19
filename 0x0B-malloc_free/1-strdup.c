@@ -14,12 +14,13 @@ char *_strdup(char *str)
 	/* this is the pointer that will point to the new array */
 	char *ptr;
 	unsigned int i;
-	unsigned int sizeOfStr = (strlen(str) + 1);
+	unsigned int sizeOfStr;
 
-	if (str == NULL)
+	if (!str)
 	{
 		return (NULL);
 	}
+	sizeOfStr = (strlen(str) + 1);
 	ptr = malloc(sizeOfStr * sizeof(char));
 	if (ptr == NULL)
 	{

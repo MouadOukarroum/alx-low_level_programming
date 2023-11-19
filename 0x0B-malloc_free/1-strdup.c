@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 
 /**
@@ -13,17 +14,18 @@ char *_strdup(char *str)
 	/* this is the pointer that will point to the new array */
 	char *ptr;
 	unsigned int i;
+	unsigned int sizeOfStr = (strlen(str) + 1);
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	ptr = malloc(sizeof(str) * sizeof(char));
+	ptr = malloc(sizeOfStr * sizeof(char));
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < sizeof(str); i++)
+	for (i = 0; i < sizeOfStr; i++)
 	{
 		ptr[i] = str[i];
 	}

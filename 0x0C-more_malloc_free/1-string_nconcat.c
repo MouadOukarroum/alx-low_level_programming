@@ -33,7 +33,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(size * sizeof(char));
 	if (!ptr)
 	{
-		free(ptr);
 		return (NULL);
 	}
 	/* assign s1 and n of bytes from s2 to ptr*/

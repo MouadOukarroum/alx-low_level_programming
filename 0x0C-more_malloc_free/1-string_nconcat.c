@@ -28,7 +28,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-
 	/*allcoating memory for our new array*/
 	size = (s1Size + n + 1);
 	ptr = malloc(size * sizeof(char));

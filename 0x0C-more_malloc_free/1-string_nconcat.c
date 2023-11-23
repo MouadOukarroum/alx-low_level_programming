@@ -13,23 +13,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
 	unsigned int i, j, s1Size;
-	int size;
-
-	for (s1Size = 0; s1[s1Size] != '\0'; s1Size++)
-		;
 
 	/* handling NULL passed as s1 or s2*/
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 	/*allcoating memory for our new array*/
-	size = (s1Size + n + 1);
-	ptr = malloc(size);
+	for (s1Size = 0; s1[s1Size] != '\0'; s1Size++)
+		;
+
+	ptr = malloc(s1Size + n + 1);
 	if (ptr == NULL)
 	{
 		return (NULL);

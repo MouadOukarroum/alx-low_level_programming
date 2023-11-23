@@ -10,20 +10,21 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *ptr;
-	void *toreturn;
+	void *ptr;
+	char *onebyte;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	ptr = malloc(nmemb * size * sizeof(int));
+	ptr = malloc(nmemb *  size);
 	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < (nmemb * size); i++)
-		ptr[i] = 0;
+	onebyte = ptr;
 
-	toreturn = &ptr;
-	return (toreturn);
+	for (i = 0; i < (nmemb * size); i++)
+		onebyte[i] = '\0';
+
+	return (ptr);
 }

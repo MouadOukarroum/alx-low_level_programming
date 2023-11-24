@@ -3,12 +3,6 @@
 #include "main.h"
 #include <stdio.h>
 
-/**
- * print_number - prints a number
- * @n: the number to print.
- * Return: nothing; it's a void funtion
- */
-
 void print_number(int n);
 
 
@@ -35,18 +29,18 @@ int main(int argc, char *argv[])
 
 	for (j = 0; argv[1][j]; j++)
 	{
-		if(!isdigit(argv[1][j]))
+		if (!isdigit(argv[1][j]))
 		{
 			for (i = 0; i < 5; i++)
 				_putchar(er[i]);
 			_putchar('\n');
-			exit(98);	
-		}	
+			exit(98);
+		}
 	}
 
 	for (k = 0; argv[2][k]; k++)
 	{
-		if(!isdigit(argv[2][k]))
+		if (!isdigit(argv[2][k]))
 		{
 			for (i = 0; i < 5; i++)
 				_putchar(er[i]);
@@ -64,6 +58,12 @@ int main(int argc, char *argv[])
 	_putchar('\n');
 	return (0);
 }
+
+/**
+ * print_number - prints a number
+ * @n: the number to print.
+ * Return: nothing; it's a void funtion
+ */
 
 void print_number(int n)
 {

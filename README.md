@@ -1,4 +1,4 @@
-img
+
 C is FUN 😊
 Learning C right now, been wanting to get on this. It's going to be FUN !!.
 

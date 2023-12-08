@@ -6,7 +6,7 @@
 #include <stddef.h>
 
 /**
- * struct list - is a struct containing a string
+ * struct list_s - is a struct containing a string
  * its length and a pointer to another struct
  * @str: a pointer to a string
  * @len: length of the string

@@ -7,25 +7,31 @@
  * Return: a pointer to the list
  */
 
-
-list_t *add_node_end(list_t **head, char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *lastNode = NULL;
-	list_t *ptr;
+	list_t *lastNode = malloc(sizeof(list_t));
+	list_t *ptr = *head;
 
-	lastNode = malloc(sizeof(list_t));
-	if (lastNode == NULL)
+	if (!lastNode || !head)
 		return (NULL);
-	lastNode->str = strdup(str);
-	lastNode->len = strlen(str);
-	lastNode->next = NULL;
-
-	ptr = *head;
-	while (ptr != NULL)
+	if (str)
 	{
-		ptr = ptr->next;
+		lastNode->str = strdup(str);
+		if (!lastNode->str)
+		{
+			free(lastNode);
+			return (NULL);
+		}
+		lastNode->len = _strlen(lastNode->str);
 	}
-	ptr->next = lastNode;
 
+	if (ptr)
+	{
+		while (ptr->next)
+			ptr = ptr->next;
+		ptr->next = lastNode;
+	}
+	else
+		*head = lastNode;
 	return (lastNode);
 }

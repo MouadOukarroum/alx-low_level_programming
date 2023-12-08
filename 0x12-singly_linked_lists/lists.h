@@ -11,13 +11,14 @@
  * @str: a pointer to a string
  * @len: length of the string
  * @next: a pointer to the next node
+ * Description: singly liked list node structure
  */
 
-typedef struct list
+typedef struct list_s
 {
 	char *str;
-	int len;
-	struct list *next;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);

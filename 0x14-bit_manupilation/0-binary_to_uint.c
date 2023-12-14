@@ -6,7 +6,7 @@
 
 /**
  * binary_to_uint - converts binary to int
- * @h: a binary string to convert to int
+ * @b: a binary string to convert to int
  * Return: unsigned int
  */
 
@@ -15,7 +15,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int integer = 0;
 	unsigned int i;
 
-	if ( b == NULL)
+	if (b == NULL)
 		return (0);
 
 	for (i = 0; i < strlen(b); i++)
